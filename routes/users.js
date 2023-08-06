@@ -1,10 +1,12 @@
 import express from 'express';
 var router = express.Router();
 
-/* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
-});
+import UserController from '../controllers/user.controller.js';
 
-// module.exports = router;
+router.get('/', UserController.taskList);
+router.get('/:id', UserController.task);
+router.post('/', UserController.createTask);
+router.put('/:id', UserController.updateTask);
+router.delete('/:id', UserController.deleteTask);
+
 export default router;

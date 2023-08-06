@@ -18,9 +18,12 @@ const tasksSchema = new mongoose.Schema({
         type: Date,
         default: Date.now(),
         required: 'Must have created at date - default value is the created date'
-    }
+    },
+    user_id: {
+        type: String,
+        required: "User ID cannot be blank"
+    } 
 });
 
 const TaskModel = mongoose.model("task", tasksSchema);
-
 export default TaskModel;

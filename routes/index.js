@@ -1,7 +1,7 @@
 import express from 'express';
 var router = express.Router();
 
-import TaskController from '../controllers/todo.conrtoller.js';
+import TaskController from '../controllers/todo.contoller.js';
 
 
 router.get('/', TaskController.taskList);
