@@ -4,10 +4,10 @@ var router = express.Router();
 import UserController from '../controllers/user.controller.js';
 
 
-router.get('/', UserController.taskList);
-router.get('/:id', UserController.task);
-router.post('/', UserController.createTask);
-router.put('/:id', UserController.updateTask);
-router.delete('/:id', UserController.deleteTask);
+router.get('/', UserController.userList);
+router.get('/:id', UserController.user);
+router.post('/', UserController.createUser);
+router.put('/:id', UserController.updateUser);
+router.delete('/:id', UserController.deleteUser);
 
 export default router;

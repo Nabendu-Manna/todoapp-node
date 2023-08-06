@@ -29,6 +29,7 @@ class UserController {
                 password: password,
             })
             const result = await user.save()
+            console.log(result);
             res.status(201).send(result)
         } catch (err) {
             res.status(400).send({ error: err })
